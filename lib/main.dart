@@ -1,11 +1,13 @@
-import 'package:flame/game.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
+import 'app/game/game_app.dart';
 import 'services/app.locator.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations(
+      [DeviceOrientation.landscapeLeft, DeviceOrientation.landscapeRight]);
   await setupLocator();
-  final game = FlameGame();
-  runApp(GameWidget(game: game));
+  runApp(const GameApp());
 }
