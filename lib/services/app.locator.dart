@@ -1,6 +1,7 @@
-import 'package:geometry_dash/services/settings_service.dart';
 // ignore: depend_on_referenced_packages
 import 'package:stacked/stacked_annotations.dart';
+
+import 'settings_service.dart';
 
 final locator = StackedLocator.instance;
 
